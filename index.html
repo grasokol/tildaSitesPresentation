@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Smart Country</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      position: relative;
+      background: #121212;
+      background-image: url('laptop.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3); 
+      z-index: -1;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      padding: 1rem 0;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1rem;
+      color: #ccc;
+    }
+    main {
+      padding: 2rem 1rem;
+      width: 100%;
+      max-width: 1200px;
+    }
+    .participant-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem; /* Единое расстояние между карточками */
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .participant-item {
+      background: rgba(0, 0, 0, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      overflow: hidden;
+      padding: 1rem;
+    }
+    .participant-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.85);
+      /* border: 1px solid #00bcd4; */
+    }
+    .participant-item h3 {
+      margin: 0.5rem 0 0.5rem;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+    .participant-item p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    .participant-item .visit-btn {
+      display: inline-block;
+      margin: 1rem 0 0;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px solid #00bcd4;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .participant-item .visit-btn:hover {
+      background: #00bcd4;
+      transform: translateY(-2px);
+    }
+    footer {
+      margin-top: 2rem;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #999;
+      background: rgba(0, 0, 0, 0.75);
+      width: 100%;
+    }
+    footer a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .vote-arrow {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.65);
+      border: 1px solid #00bcd4;
+      border-radius: 12px;
+      padding: 0.8rem 1.2rem;
+      text-decoration: none;
+      transition: transform 0.3s, background 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .vote-arrow:hover {
+      background: #00bcd4;
+      transform: translateY(-5px);
+    }
+    .vote-arrow span {
+      font-weight: bold;
+      margin-left: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Smart Country</h1>
+    <p>Discover websites presented by our participants</p>
+  </header>
+  <main>
+    <ul class="participant-list">
+      <li class="participant-item">
+        <h3>Finspace</h3>
+        <p>Group301 Gotskaya Anna, Petrenko Elizaveta, Tarasenko Ekaterina</p>
+        <a class="visit-btn" href="https://yourfinspace.tilda.ws/" target="_blank">Visit Website</a>
+      </li>
+      <li class="participant-item">
+        <h3>YourOffice</h3>
+        <p>Group304 Kravchenya Diana, Urban Elizaveta</p>
+        <a class="visit-btn" href="https://electronicoffice.tilda.ws/" target="_blank">Visit Website</a>
+      </li>
+      <li class="participant-item">
+        <h3>BelEdTech</h3>
+        <p>Group304 Bobrovnichaya Alyona</p>
+        <a class="visit-btn" href="https://beledtech.com.tilda.ws" target="_blank">Visit Website</a>
+      </li>
+      <li class="participant-item">
+        <h3>ExploreTogetherBY</h3>
+        <p>Group303 Mozoleva Yuliya, Sudnik Aleg</p>
+        <a class="visit-btn" href="http://exploretogetherby.tilda.ws/" target="_blank">Visit Website</a>
+      </li>
+      <li class="participant-item">
+        <h3>BelECO</h3>
+        <p>Group303 Yurko Alina, Ivanova Ekaterina</p>
+        <a class="visit-btn" href="https://beleco.tilda.ws/beleco" target="_blank">Visit Website</a>
+      </li>
+      <li class="participant-item">
+        <h3>OpenInnovations</h3>
+        <p>Group301 Dzemidzenko Kseniya, Holubeva Tatsiana</p>
+        <a class="visit-btn" href="https://example.com" target="_blank">Visit Website</a>
+      </li>
+      <li class="participant-item">
+        <h3>TaxFiller</h3>
+        <p>Group302 Vladislav Ponomarenko, Maxim Kolesinsky</p>
+        <a class="visit-btn" href="https://project11355345.tilda.ws/" target="_blank">Visit Website</a>
+      </li>
+      <li class="participant-item">
+        <h3>Timack Fit</h3>
+        <p>Group302 Evgeny Levkovets, Timofey Lutovich</p>
+        <a class="visit-btn" href="https://project11355843.tilda.ws/page58857113.html" target="_blank">Visit Website</a>
+      </li>
+      <a href="vote.html" class="vote-arrow" title="Vote">&#8594;</a>
+    </ul>
+  </main>
+  <footer>
+    <p>Prepared with love by IRM students of the Academy <br>of Public Administration under the President of the Republic of Belarus</p>
+  </footer>
+  <a href="http://project11384725.tilda.ws/" class="vote-arrow" title="Vote">&#8594;</a>
+</body>
+</html>
